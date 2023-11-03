@@ -48,19 +48,26 @@ header .container-menu {
 header .container-menu .menu {
     justify-self: end;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 100px 100px 100px;
 }
 
-header .container-menu .menu a{
-    /*text-decoration: none;*/
+header .container-menu .menu a {
     text-align: center;
     color: white;
     text-decoration: none;
     margin-left: 10px;
+    box-sizing: border-box;
+
 }
 
 header .container-menu .menu .par-menu {
+    border-radius: 20px;
+    transition: 0.5s;
+}
 
+header .container-menu .menu .par-menu:hover {
+    background: rgba(178, 178, 178, 0.5);
+    scale: 1.2;
 }
 
                       /*MAIN*/
@@ -94,6 +101,10 @@ main {
     margin: 1% auto;
 }
 
+.presentation a {
+    text-decoration: none;
+}
+
 .presentation .order-btn {
     background-color: #34C759;
     color: black;
@@ -102,6 +113,13 @@ main {
     padding: 1% 2%;
     margin: 2% auto;
     border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.presentation .order-btn:hover {
+    scale: 1.2;
+    background-color: chartreuse;
 }
 
 .presentation .contacts {
@@ -150,13 +168,18 @@ h3 {
 
 .about #carouselExample {
     margin: auto;
-    height: 50vh;
+    height: 600px;
+    overflow: hidden;
     background: black;
+    display: grid;
+}
+
+.about #carouselExample .carousel-inner {
+    align-self: center;
 }
 
 .about #carouselExample .carousel-inner img {
-    width: 100%;
-    height: 50vh;
+    text-align: center;
 }
 
 
@@ -271,6 +294,7 @@ h3 {
     padding: 1% 3%;
     border-radius: 5px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .dishes .bottom-container .order-button:hover {
@@ -332,8 +356,9 @@ h3 {
     grid-column-gap: 2%;
 }
 
-.chefs .inst-chefs .chaf-card .img-container img {
-    /*padding-right: 3%;*/
+.chefs .inst-chefs .chaf-card .img-container img:hover {
+    scale: 1.2;
+    box-shadow: 0 5px rgba(30, 28, 28, 0.68);
 }
 
                           /*RECIPES*/
@@ -380,18 +405,11 @@ background-color: rgba(47, 47, 44, 0.6);
     margin: auto;
     padding: 1% 5%;
     box-sizing: border-box;
-}
-
-.recipes .rec .main-recipe .date {
-
-}
-
-.recipes .rec .main-recipe p {
-
+    cursor: pointer;
 }
 
 .recipes .rec .main-recipe .author {
-
+    cursor: pointer;
 }
 
 .recipes .rec .main-recipe .feedback {
@@ -400,6 +418,7 @@ background-color: rgba(47, 47, 44, 0.6);
     align-items: start;
     justify-content: space-between;
     margin: auto;
+    cursor: pointer;
 }
 
 .recipes .rec .main-recipe .feedback .spectators {
@@ -450,6 +469,7 @@ background-color: rgba(47, 47, 44, 0.6);
     padding: 2% 3%;
     text-align: center;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .first .meal-rest {
@@ -464,12 +484,9 @@ background-color: rgba(47, 47, 44, 0.6);
     background-color: rgba(37, 37, 37, 0.9);
 }
 
-.rest-recipe .date-rest {
-
-}
-
 .rest-recipe img {
     justify-self: right;
+    cursor: pointer;
 }
 
                            /*SOCIAL*/
@@ -512,6 +529,14 @@ background-color: rgba(47, 47, 44, 0.6);
     border: 1px solid grey;
     border-radius: 10px;
     text-align: center;
+    transition: 0.5s;
+}
+
+.soc .head-soc .follow-btn:hover {
+    background-color: white;
+    color: #252525;
+    scale: 1.1;
+    cursor: pointer;
 }
 
 .soc .soc-contain {
@@ -539,25 +564,9 @@ background-color: rgba(47, 47, 44, 0.6);
     background-color: #2f2f2c;
 }
 
-::-webkit-scrollbar-button { /* 2 - кнопка */
-
-}
-
-::-webkit-scrollbar-track { /* 3 - трек */
-}
-
-::-webkit-scrollbar-track-piece { /* 4 - видимая часть трека */
-}
-
 ::-webkit-scrollbar-thumb { /* 5 - ползунок */
     border-radius: 2px;
     background-color: #d1d1d1;
-}
-
-::-webkit-scrollbar-corner { /* 6 - уголок */
-}
-
-::-webkit-resizer { /* 7 - изменение размеров */
 }
 
                       /*FOOTER*/
